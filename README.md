@@ -62,6 +62,8 @@ Use JSON policy enabling EC2 start/stop and log access:
 
 **IMP**- Edit the Instance id in that
 
+![View lambda function](images/lambda-function.png)
+
 ### 4.Test
 
 - Test manually with
@@ -75,7 +77,9 @@ Use JSON policy enabling EC2 start/stop and log access:
 - 30 sec
 - configured ✅
 
-### Configure EventBridge Schedule Rules
+### 6. Configure EventBridge Schedule Rules
+
+![Define Shedule Rules](images/Define-cron.png)
 
 - Go to EventBridge → Scheduler → Create schedule
 
@@ -101,3 +105,15 @@ Pass custom payload like
 ```
 { "action": "start/stop" }
 ```
+Created Function Rule - Update Rule ✅
+
+![Stop Eventbridge created](images/Rule-stop.png)
+
+### 7. Go to the lambda function
+
+- Go to configuration
+- Add Trigers:
+- EventBridge (CloudWatch Events): ec2-stop-rule
+- EventBridge (CloudWatch Events): ec2-start-rule
+
+![Schedules Triggers](images/Trigger-lam.png)
