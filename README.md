@@ -51,22 +51,30 @@ Use JSON policy enabling EC2 start/stop and log access:
 - Lambda → Create Function → Author from scratch
 - Runtime: Python 3.x
 - Change Default execution role--use existing
-- Existing role-<select role>
+- Existing role -->select role name
 - Created function✅
 
 - Use this code
 
-👉 [view Code](lambda_fuction.py)
+- 👉 [view Code](lambda_fuction.py)
 
 - Delpoy it ✅ 
+
 **IMP**- Edit the Instance id in that
 
 ### 4.Test
+
 - Test manually with
+
 ```
 {}
+
 ```
-### 5.Configuration -->Timeout-->30 Sec--> Save it-->Then Test
+### 5.Configuration
+
+- timeout
+- 30 sec
+- configured ✅
 
 ## Configure EventBridge Schedule Rules
 
