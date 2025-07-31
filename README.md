@@ -56,7 +56,7 @@ Use JSON policy enabling EC2 start/stop and log access:
 
 - Use this code
 
-- 👉 [view Code](/lambda_fuction.py)
+- 👉 [view Code](lambda_fuction.py)
 
 - Delpoy it ✅ 
 
