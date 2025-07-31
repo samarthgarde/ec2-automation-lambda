@@ -47,13 +47,14 @@ Use JSON policy enabling EC2 start/stop and log access:
 ```
 
 ### 3.Create lambda function
-Lambda → Create Function → Author from scratch
-Runtime: Python 3.x
-Change Default execution role--use existing
-Existing role-<select role>
-Created function✅
 
-Use this code:
+- Lambda → Create Function → Author from scratch
+- Runtime: Python 3.x
+- Change Default execution role--use existing
+- Existing role-<select role>
+- Created function✅
+
+- Use this code:
 ```
 import boto3
 
@@ -87,7 +88,7 @@ def lambda_handler(event, context):
 **IMP**- Edit the Instance id in that
 
 ### 4.Test
-Test manually with
+- Test manually with
 ```
 {}
 ```
@@ -96,6 +97,7 @@ Test manually with
 ## Configure EventBridge Schedule Rules
 
 Go to EventBridge → Scheduler → Create schedule
+
 Choose a cron expression (e.g., cron(0 3 * * ? *) for 3 AM UTC)
 
 📘 Explanation:
@@ -107,6 +109,7 @@ Choose a cron expression (e.g., cron(0 3 * * ? *) for 3 AM UTC)
 2025 → year
 
 Target: select relevant Lambda function
+
 Pass custom payload like
 ```
 { "action": "start/stop" }
