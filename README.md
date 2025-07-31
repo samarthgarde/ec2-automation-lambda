@@ -56,7 +56,7 @@ Use JSON policy enabling EC2 start/stop and log access:
 
 - Use this code
 
-- 👉 [view Code](lambda_fuction.py)
+- 👉 [view Code](/lambda_fuction.py)
 
 - Delpoy it ✅ 
 
@@ -68,7 +68,6 @@ Use JSON policy enabling EC2 start/stop and log access:
 
 ```
 {}
-
 ```
 ### 5.Configuration
 
@@ -76,18 +75,24 @@ Use JSON policy enabling EC2 start/stop and log access:
 - 30 sec
 - configured ✅
 
-## Configure EventBridge Schedule Rules
+### Configure EventBridge Schedule Rules
 
-Go to EventBridge → Scheduler → Create schedule
+- Go to EventBridge → Scheduler → Create schedule
 
-Choose a cron expression (e.g., cron(0 3 * * ? *) for 3 AM UTC)
+- Choose a cron expression (e.g., cron(0 3 * * ? *) for 3 AM UTC)
 
-📘 Explanation:
+- 📘 Explanation:
+
 3 → minute (03)
+
 11 → hour (11 AM UTC)
+
 31 → day of month (31st)
+
 7 → July
+
 ? → ignore day-of-week
+
 2025 → year
 
 Target: select relevant Lambda function
@@ -96,4 +101,3 @@ Pass custom payload like
 ```
 { "action": "start/stop" }
 ```
-
