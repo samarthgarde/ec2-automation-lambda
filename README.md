@@ -54,7 +54,8 @@ Use JSON policy enabling EC2 start/stop and log access:
 - Existing role-<select role>
 - Created function✅
 
-- Use this code:
+- Use this code
+
 ```
 import boto3
 
@@ -84,6 +85,7 @@ def lambda_handler(event, context):
             'body': 'Invalid action. Use "start" or "stop".'
         }
 ```
+
 - Delpoy it ✅ 
 **IMP**- Edit the Instance id in that
 
